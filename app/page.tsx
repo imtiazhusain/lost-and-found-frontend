@@ -1,5 +1,5 @@
 'use client'
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import _axios from "./config/axios.config";
 import { toast } from "sonner";
 import axios from "axios";
@@ -17,8 +17,6 @@ export default function Home() {
   const [loading, setLoading] = useState(false)
   const [openFilter, setOpenFilter] = useState(false)
   const [filterQuery, setFilterQuery] = useState({ status: '', time: 'Latest', place: '', placeValue: '' })
-
-
 
 
 
@@ -79,6 +77,8 @@ export default function Home() {
     const { value, name } = event.target
     setFilterQuery(pre => ({ ...pre, [name]: value }))
   }
+
+
 
 
 
