@@ -150,13 +150,13 @@ const Page = () => {
                 </Link>
             </div>
 
-            <h1 className="text-center text-[4vw] text-gray-600 mb-5">Your <span className="text-red-500">Posts</span> </h1>
+            <h1 className="text-center text-[7vw] md:text-[4vw] text-gray-600 my-5">Your <span className="text-red-500">Posts</span> </h1>
 
 
 
-            {/* <Filter setOpenFilter={setOpenFilter} openFilter={openFilter} setFilterValue={setFilterValue} /> */}
+
             <Filter setOpenFilter={setOpenFilter} openFilter={openFilter} setFilterValue={setFilterValue} placeValueChange={placeValueChange} filterQuery={filterQuery} />
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))]    gap-y-6 gap-x-5 lg:gap-x-8 place-content-center  place-items-center mb-6">
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))]    gap-y-6 gap-x-5 lg:gap-x-8 place-content-center  place-items-center mb-6">
                 {loading ? <LoadingPosts /> : (
                     posts?.length > 0 ?
                         posts.map(post => <Post post={post} showActions={true} key={post._id} deletePost={deletePost} deletePostLoading={deletePostLoading} />) :
